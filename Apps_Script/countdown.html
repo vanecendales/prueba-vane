@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+    .countdown {
+      display: grid;
+      margin: 1em auto;
+      width: 20em;
+      height: 20em;
+    }
+    .countdown::after {
+      grid-column: 1;
+      grid-row: 1;
+      place-self: center;
+      font: 5em/2 ubuntu mono, consolas, monaco, monospace;
+      animation: num 60s steps(1) infinite;
+      content: "0:" counter(s, decimal-leading-zero);
+    }
+
+    @keyframes num {
+      0% {
+        counter-reset: s 60;
+      }
+      1.67% {
+        counter-reset: s 59;
+      }
+        3.33% {
+      counter-reset: s 58;
+        }
+      5.0% {
+        counter-reset: s 57;
+      }
+        6.67% {
+      counter-reset: s 56;
+        }
+      8.33% {
+        counter-reset: s 55;
+      }
+        10.0% {
+      counter-reset: s 54;
+        }
+      11.67% {
+        counter-reset: s 53;
+      }
+        13.33% {
+      counter-reset: s 52;
+        }
+      15.0% {
+        counter-reset: s 51;
+      }
+        16.67% {
+      counter-reset: s 50;
+        }
+      18.33% {
+        counter-reset: s 49;
+      }
+        20.0% {
+      counter-reset: s 48;
+        }
+      21.67% {
+        counter-reset: s 47;
+      }
+        23.33% {
+      counter-reset: s 46;
+        }
+      25.0% {
+        counter-reset: s 45;
+      }
+        26.67% {
+      counter-reset: s 44;
+        }
+      28.33% {
+        counter-reset: s 43;
+      }
+        30.0% {
+      counter-reset: s 42;
+        }
+      31.67% {
+        counter-reset: s 41;
+      }
+        33.33% {
+      counter-reset: s 40;
+        }
+      35.0% {
+        counter-reset: s 39;
+      }
+        36.67% {
+      counter-reset: s 38;
+        }
+      38.33% {
+        counter-reset: s 37;
+      }
+        40.0% {
+      counter-reset: s 36;
+        }
+      41.67% {
+        counter-reset: s 35;
+      }
+        43.33% {
+      counter-reset: s 34;
+        }
+      45.0% {
+        counter-reset: s 33;
+      }
+        46.67% {
+      counter-reset: s 32;
+        }
+      48.33% {
+        counter-reset: s 31;
+      }
+        50.0% {
+      counter-reset: s 30;
+        }
+      51.67% {
+        counter-reset: s 29;
+      }
+        53.33% {
+      counter-reset: s 28;
+        }
+      55.0% {
+        counter-reset: s 27;
+      }
+        56.67% {
+      counter-reset: s 26;
+        }
+      58.33% {
+        counter-reset: s 25;
+      }
+        60.0% {
+      counter-reset: s 24;
+        }
+      61.67% {
+        counter-reset: s 23;
+      }
+        63.33% {
+      counter-reset: s 22;
+        }
+      65.0% {
+        counter-reset: s 21;
+      }
+        66.67% {
+      counter-reset: s 20;
+        }
+      68.33% {
+        counter-reset: s 19;
+      }
+        70.0% {
+      counter-reset: s 18;
+        }
+      71.67% {
+        counter-reset: s 17;
+      }
+        73.33% {
+      counter-reset: s 16;
+        }
+      75.0% {
+        counter-reset: s 15;
+      }
+        76.67% {
+      counter-reset: s 14;
+        }
+      78.33% {
+        counter-reset: s 13;
+      }
+        80.0% {
+      counter-reset: s 12;
+        }
+      81.67% {
+        counter-reset: s 11;
+      }
+        83.33% {
+      counter-reset: s 10;
+        }
+      85.0% {
+        counter-reset: s 9;
+      }
+        86.67% {
+      counter-reset: s 8;
+        }
+      88.33% {
+        counter-reset: s 7;
+      }
+        90.0% {
+      counter-reset: s 6;
+        }
+      91.67% {
+        counter-reset: s 5;
+      }
+        93.33% {
+      counter-reset: s 4;
+        }
+      95.0% {
+        counter-reset: s 3;
+      }
+        96.67% {
+      counter-reset: s 2;
+        }
+      98.33% {
+        counter-reset: s 1;
+      }
+      100.0% {
+        counter-reset: s 0;
+      }
+    }
+    svg {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    [r] {
+      fill: none;
+      stroke: silver;
+    }
+    [r] + [r] {
+      transform: rotate(-90deg);
+      stroke-linecap: round;
+      stroke: #8A9B0F;
+      animation: arc 60s linear infinite;
+      animation-name: arc, col;
+    }
+
+    @keyframes arc {
+      0% {
+        stroke-dashoffset: 0px;
+      }
+    }
+    @keyframes col {
+      0% {
+        stroke: #8A9B0F;
+      }
+      25% {
+        stroke: #F8CA00;
+      }
+      50% {
+        stroke: #E97F02;
+      }
+      75% {
+        stroke: #BD1550;
+      }
+      100% {
+        stroke: #490A3D;
+      }
+    }
+
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  </head>
+  <body>
+    <div class="countdown">
+    <svg viewBox="-50 -50 100 100" stroke-width="10">
+      <circle r="45"></circle>
+      <circle r="45" stroke-dasharray="282.7433388230814" stroke-dashoffset="282.7433388230814px"></circle>
+    </svg>
+  </div>
+  </body>
+</html>
