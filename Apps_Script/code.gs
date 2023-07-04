@@ -1,6 +1,6 @@
 // Initial Data
 GH_REPO_URL = "https://api.github.com/repos/iliaozhmegov/CV";
-GH_TOKEN    = PropertiesService.getScriptProperties().getProperty("github_token"); // github_token in script properties
+GH_TOKEN    = "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";
 GH_PURGE    = true;
 GD_DOC_ID   = DocumentApp.getActiveDocument().getId();
 GD_FOLDER   = "1aba-tnQZxZMN7DN52eAywTU-Xs-eqOf4";
